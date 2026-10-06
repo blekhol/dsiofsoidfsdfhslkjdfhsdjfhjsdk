@@ -45,7 +45,8 @@ namespace Okosotthon
 
         public virtual void GyariBeallitasokVisszaallitasa()
         {
-            throw new NotImplementedException();
+            this.onlineE = false;
+            this.utolsoFrissites = DateTime.Now;
         }
 
 

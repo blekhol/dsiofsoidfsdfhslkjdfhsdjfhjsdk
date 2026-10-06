@@ -6,20 +6,34 @@ namespace Okosotthon
 {
     public class OkosotthonKozpont
     {
+        private readonly List<OkosEszkoz> eszkozok = [];
+
         public void EszkozHozzaadasa(OkosEszkoz eszkoz)
         {
-            throw new NotImplementedException();
+            eszkozok.Add(eszkoz);
         }
 
      
         public void OsszesCsatlakoztatasa()
         {
-            throw new NotImplementedException();
+            foreach (var item in eszkozok)
+            {
+                item.Csatlakozas();
+            }
         }
 
         public int RendszerDiagnosztikaFuttatasa()
         {
-            throw new NotImplementedException();
+            int db = 0;
+            foreach (var item in eszkozok)
+            {
+                if (item.DiagnosztikaFuttatasa())
+                {
+                    db++;
+                }
+            }
+
+            return db;
         }
 
     }
