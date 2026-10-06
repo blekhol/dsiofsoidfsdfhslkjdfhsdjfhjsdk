@@ -22,7 +22,7 @@ namespace Okosotthon
         {
             if (parancs.Contains("BEALLIT_HOMERSEKLET:"))
             {
-                CelHomerseklet = double.Parse(parancs.Split(':')[1]);
+                CelHomerseklet = Convert.ToDouble(parancs.Split(':')[1]);
             }
         }
 
